@@ -1,31 +1,29 @@
 package view;
 import java.util.Scanner;
-import list.LinkedList;
+import list.LinkedStack;
 
 public class main {
-    public void main(String[] args){
+    public static void main(String[] args){
         Scanner input = new Scanner(System.in);
 
-        LinkedList<String> sample1 = new LinkedList();
+        LinkedStack<String> sample1 = new LinkedStack();
 
         while (true) {
-            System.out.println("1: add, 2: delete, 3: size 4: search");
+            System.out.println("1: push, 2: pop, 3: size");
             int condition = input.nextInt();
             switch (condition) {
                 case 1:
                     String s = input.next();
-                    sample1.add(s);
+                    sample1.push(s);
                     break;
                 case 2:
-                    int a = input.nextInt();
-                    sample1.removeLast();
+                    System.out.println("삭제된 데이터 : "+sample1.pop());
                     break;
                 case 3:
-                    System.out.println(sample1.size());
+                    System.out.println(sample1.getSize());
                     break;
-                case 4:
-                    String asdf = input.next();
-                    System.out.println(sample1.search(asdf));
+                default :
+                    System.out.println("잘못된 입력");
                     break;
             }
         }
