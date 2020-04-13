@@ -5,28 +5,32 @@ import java.util.Scanner;
 public class main {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
+		LinkedQueue queue<String> = new LinkedQueue<String>();
 		int a;
 		loop: while (true) {
 
-			System.out.println("1:»ðÀÔ | 2 :»èÁ¦ | 3:»çÀÌÁî Ãâ·Â");
-			System.out.println("Á¾·á -> 1, 2 ¿Ü ¾Æ¹«°Å³ª ÀÔ·Â");
+			System.out.println("1:ì‚½ìž… | 2 :ì‚­ì œ | 3:ì‚¬ì´ì¦ˆ ì¶œë ¥");
+			System.out.println("ì¢…ë£Œ -> 1, 2 ì™¸ ì•„ë¬´ê±°ë‚˜ ìž…ë ¥");
 			try {
 				a = input.nextInt();
 				switch (a) {
-				case 1:
-					//add°¡ ¼º°øÇß´Ù¸é ¼º°øÇß´Ù´Â message Ãâ·Â
-					break;
-				case 2:
-					//popÇÑ µ¥ÀÌÅÍ Ãâ·Â
-					break;
-				case 3:
-					break;
-				default:
-					break loop;
+					case 1:
+						String s = input.next();
+						if(queue.push(s))
+							System.out.println("ì„±ê³µí–ˆìŠµë‹ˆë‹¤");
+						break;
+					case 2:
+						String s = input.next();
+						System.out.println(queue.pop(s));
+						break;
+					case 3:
+						break;
+					default:
+						break loop;
 				}
 
 			} catch (Exception e) {
-				System.out.println("Á¾·á");
+				System.out.println("ì¢…ë£Œ");
 				break;
 			}
 		}

@@ -1,6 +1,6 @@
 package view;
-import java.util.Scanner;
-import list.LinkedStack;
+        import java.util.Scanner;
+        import list.LinkedStack;
 
 public class Main {
     public static void main(String[] args){

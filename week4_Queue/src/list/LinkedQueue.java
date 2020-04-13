@@ -2,11 +2,11 @@ package list;
 
 public class LinkedQueue<T> extends LinkedList {
 	/*
-	 * ÀÚ¹Ù Collection FrmaeWork¿¡¼­´Â Queue´Â interface·Î ±â¼ú.
-	 * LinkedList´Â Queue¸¦ »ó¼Ó ¹Ş´Â ÇüÅÂ·Î ±¸Çö
-	 * ¤¤> Dequeue, priorityQueue¿Í°°Àº ÇüÅÂÀÇ ÀÚ·á±¸Á¶°¡ Á¸Àç, ÀÌ¸¦ ¹­¾îÁÖ±â À§ÇØ
-	 * 
-	 * ÇÏÁö¸¸ ÀÌ¹ø ½Ã°£Àº Queue¸¦ ±¸ÇöÇÏ´Â °ÍÀÌ ¸ñÀûÀÌ¹Ç·Î LinkedList¸¦ »ó¼Ó.
+	 * ìë°” Collection FrmaeWorkì—ì„œëŠ” QueueëŠ” interfaceë¡œ ê¸°ìˆ .
+	 * LinkedListëŠ” Queueë¥¼ ìƒì† ë°›ëŠ” í˜•íƒœë¡œ êµ¬í˜„
+	 * ã„´> Dequeue, priorityQueueì™€ê°™ì€ í˜•íƒœì˜ ìë£Œêµ¬ì¡°ê°€ ì¡´ì¬, ì´ë¥¼ ë¬¶ì–´ì£¼ê¸° ìœ„í•´
+	 *
+	 * í•˜ì§€ë§Œ ì´ë²ˆ ì‹œê°„ì€ Queueë¥¼ êµ¬í˜„í•˜ëŠ” ê²ƒì´ ëª©ì ì´ë¯€ë¡œ LinkedListë¥¼ ìƒì†.
 	 */
 	private LinkedList<T> linkedList;
 	private int size;
@@ -15,12 +15,14 @@ public class LinkedQueue<T> extends LinkedList {
 		this.size=0;
 	}
 	public boolean push(T data) {
-		//±¸Çö
-		return false;
+		linkedList.add(data);
+		this.size++;
+		return true;
 	}
 	public T pop() {
-		//±¸Çö
-		return null;
+		T data = linkedList.removeFirst();
+		this.size--;
+		return data;
 	}
 	public int getSize() {
 		return this.size;
