@@ -24,6 +24,7 @@ public class main {
 						System.out.println(queue.pop(s));
 						break;
 					case 3:
+						System.out.println(queue.getSize());
 						break;
 					default:
 						break loop;

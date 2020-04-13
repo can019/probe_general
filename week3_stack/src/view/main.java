@@ -19,7 +19,7 @@ public class Main {
                 case 2:
                     System.out.println("삭제된 데이터 : "+sample1.pop());
                     break;
-                case 3:
+                case 3 :
                     System.out.println(sample1.getSize());
                     break;
                 default :
