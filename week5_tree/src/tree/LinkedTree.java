@@ -35,6 +35,7 @@ public class LinkedTree<T> {
         if(current==null)
             return false;
         current.setData(data);
+        return true;
     }
     public Node<T> MakeNodeByBFS(LinkedQueue<Node> queue){//overload
         Node<T> current = queue.pop();
@@ -66,10 +67,16 @@ public class LinkedTree<T> {
         Node<T> right = current.getRight();
         if(current.getData()==parent){
             if(left==null){
-
+                Node<T> temp = new Node<T>();
+                current.setLeft(temp);
+                temp.setParent(current);
+                return temp;
             }
             else if(right==null){
-
+                Node<T> temp = new Node<T>();
+                current.setRight(temp);
+                temp.setParent(current);
+                return temp;
             }
             return null;
         }
@@ -80,8 +87,6 @@ public class LinkedTree<T> {
         }
 
     }
-
-
     private int size(){
         return this.size;
     }
