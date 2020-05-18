@@ -17,19 +17,15 @@ public class LinkedTree<T> {
             return true;
         return false;
     }
-    public boolean addLeft(T data){
-
+    public boolean add(){ //overload
         return true;
     }
-    public boolean addRight(T data){
+   public boolean add(T parent, T data){ //overload
+        Node<T> current = root;
+        while()
 
-    }
-    public T removeLeft(){
+   }
 
-    }
-    public T removeRight(){
-
-    }
     private int size(){
         return this.size;
     }

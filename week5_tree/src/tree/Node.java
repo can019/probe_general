@@ -4,11 +4,12 @@ public class Node<T> {
     private T data;
     private Node<T> left;
     private Node<T> right;
-
+    private Node<T> parent;
     public Node(){
         this.left = null;
         this.right = null;
         this.data = null;
+        this.parent = null;
     }
 
     public T getData(){
@@ -29,6 +30,7 @@ public class Node<T> {
     public void setRight(Node<T> right){
         this.right = right;
     }
+    public Node<T> getParent(){return this.parent;}
 
 
 }
