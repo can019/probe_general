@@ -1,11 +1,13 @@
 package tree;
-
+import list.LinkedQueue;
 public class LinkedTree<T> {
     private Node<T> root;
     private int size;
+    private LinkedQueue<Node> queue;
 
     public LinkedTree(){
         root = new Node<T>();
+        queue = new LinkedQueue<Node>();
         int size = 0;
     }
 
