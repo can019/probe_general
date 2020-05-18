@@ -31,6 +31,7 @@ public class Node<T> {
         this.right = right;
     }
     public Node<T> getParent(){return this.parent;}
+    public void setParent(Node<T> parent){this.parent = parent;}
 
 
 }

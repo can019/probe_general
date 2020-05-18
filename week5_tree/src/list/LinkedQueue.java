@@ -20,5 +20,9 @@ public class LinkedQueue<T> extends LinkedList {
 	public int getSize() {
 		return this.size;
 	}
+	public void clear(){
+		this.size = 0;
+		this.linkedList.clear();
+	}
 
 }

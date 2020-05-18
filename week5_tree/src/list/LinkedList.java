@@ -24,10 +24,14 @@ public class LinkedList<T>  {
             return true;
         return false;
     }
-    private void setHead(Node<T> node){
-
+    public void setHead(Node<T> node){
+        this.dummy_head = node;
     }
-
+    public void clear(){
+        this.size=0;
+        this.dummy_head.setNext(dummy_tail);
+        this.dummy_tail.setPre(dummy_head);
+    }
     public boolean add(T data) {
         Node<T> current = new Node<T>(data);
         current.setNext(dummy_tail);
