@@ -88,6 +88,13 @@ public class LinkedTree<T> {
         }
 
     }
+    public T remove(T data){
+        if(isEmpty())
+            return null;
+        else{
+            return data;
+        }
+    }
     private int size(){
         return this.size;
     }
