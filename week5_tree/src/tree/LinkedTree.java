@@ -35,6 +35,7 @@ public class LinkedTree<T> {
         if(current==null)
             return false;
         current.setData(data);
+        this.setSize(this.size()+1);
         return true;
     }
     public Node<T> MakeNodeByBFS(LinkedQueue<Node> queue){//overload
