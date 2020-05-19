@@ -69,6 +69,8 @@ public class LinkedTree<T> {
         }
     }
     public Node<T> MakeNodeByBFS(LinkedQueue<Node> queue,T parent){//overload
+        if(queue.isEmpty())
+            return null;
         Node<T> current = queue.pop();
         Node<T> left = current.getLeft();
         Node<T> right = current.getRight();
@@ -88,11 +90,26 @@ public class LinkedTree<T> {
             return null;
         }
         else{
-            queue.push(left);
-            queue.push(right);
-           return  MakeNodeByBFS(queue,parent);
-        }
+            if(left==null&&right==null)
+                return MakeNodeByBFS(queue,parent);
+            else{
+                if(left!=null&&right!=null){
+                    queue.push(left);
+                    queue.push(right);
+                    return  MakeNodeByBFS(queue,parent);
+                }
+                if(left!=null){
+                    queue.push(left);
+                    return  MakeNodeByBFS(queue,parent);
+                }
+                else{
+                    queue.push(right);
+                    return  MakeNodeByBFS(queue,parent);
+                }
 
+            }
+
+        }
     }
     public T remove(T data){
         if(isEmpty())
