@@ -1,3 +1,9 @@
+/*
+ * This Code is for 2020 Probe_General session
+ * Copyright :: _Yousung,Jung
+ * Email :: jys01012@gmail.com
+ *
+ */
 package list;
 
 public class LinkedQueue<T> extends LinkedList {
