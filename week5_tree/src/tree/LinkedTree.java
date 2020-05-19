@@ -98,17 +98,13 @@ public class LinkedTree<T> {
                     queue.push(right);
                     return  MakeNodeByBFS(queue,parent);
                 }
-                if(left!=null){
+                else if(left!=null){
                     queue.push(left);
                     return  MakeNodeByBFS(queue,parent);
                 }
-                else{
-                    queue.push(right);
-                    return  MakeNodeByBFS(queue,parent);
-                }
-
+                queue.push(right);
+                return  MakeNodeByBFS(queue,parent);
             }
-
         }
     }
     public T remove(T data){
